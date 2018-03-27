@@ -30,11 +30,20 @@ public static void reader(){
  		}
 public static void randomNumber(){
 	
+        Random rn = new Random();
+        int max = 100;
+        int min = 1;
+        int randomnumber = rn.nextInt((int) (max - min + 1)) + min;
+        return randomnumber;
+
+	
 }
 public static void wordSplitter(){
 	
 }
 public static void menu(){
+	
+	System.out.println("1. Custom word\n2. Random word"");
 	
 }
 public static void writer(){
@@ -52,14 +61,7 @@ public static void writer(){
 	e.printStackTrace();
 }
 	
-	public double random() {
-        Random rn = new Random();
-        int max = 100;
-        int min = 1;
-        int randomnumber = rn.nextInt((int) (max - min + 1)) + min;
-        return randomnumber;
-
-    }
+	
 	
 
 }
