@@ -43,9 +43,33 @@ public static void wordSplitter(){
 	
 }
 public static void menu(){
-	
-	System.out.println("1. Custom word\n2. Random word"");
-	
+	Scanner sc = new Scanner(System.in);
+        System.out.println("1.Random word\n2.Custom word");
+        int x = sc.nextInt();
+        if (x == 1) {
+            menu1();
+        } else if (x == 2) {
+          //  customWord();
+        } else if (x != 1 || x != 2 || x != 3) {
+            System.out.println("Please pick an available number:");
+            menu();
+        }
+}
+public static void menu1(){
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Choose a difficulty:\n1.Easy\n2.Medium\n3.Hard");
+        int x = sc.nextInt();
+        if (x == 1) {
+	System.out.println("4letters");
+        } else if (x == 2) {
+	System.out.println("6letters");
+        } else if (x == 3) {
+	System.out.println("8letters");	
+
+        } else if (x != 1 || x != 2) {
+            System.out.println("Please pick an available number:");
+            menu1();
+        }
 }
 public static void writer(){
 
