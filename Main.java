@@ -16,6 +16,8 @@ public class Main {
 	public static int choosenLevel;
 	public static int randomNum;
 	public static String randomWord;
+	public static int lvl;
+	public static int life=4;
 public static void reader(){
 
 	String text="";
@@ -87,12 +89,15 @@ public static void menu1(){
         int x = sc.nextInt();
         if (x == 1) {
 	choosenLevel=1;
+	lvl=0;
 	level();
         } else if (x == 2) {
 	choosenLevel=2;
+	lvl=0;
 	level();
         } else if (x == 3) {
 	choosenLevel=3;
+	lvl=0;
 	level();
 
         } else if (x != 1 || x != 2) {
@@ -118,8 +123,66 @@ public static void writer(){
 	
 
 }
+public static void end(){
+	System.out.println("Ta si zedol kokot");
+}
 public static void level(){
-wordSplitter();	
+wordSplitter();
+lvl++;
+life=4;
+String letter="";
+String word="";
+if(choosenLevel==1){word="----";}
+if(choosenLevel==2){word="------";}
+if(choosenLevel==3){word="--------";}
+String[] wordSplit = randomWord.split("");
+
+int wrd=0;
+while(wrd!=1){
+System.out.println("__________________________");
+System.out.println("Word:");
+System.out.println(word);
+System.out.println("Level= " +lvl + "  Life= " +life);
+System.out.println("Letter:");
+letter=sc.nextLine();
+int x=0;
+String[] wSplit = word.split("");
+
+
+int gut=0;
+while(x<word.length()){
+if(letter.equals(wordSplit[x])){
+wSplit[x]=letter;
+gut=1;
+}
+x++;	
+}
+if(gut!=1){
+	life=life-1;
+	System.out.println("Miss!");
+}
+if(life==0){
+	wrd=1;
+	end();
+}
+int a=0;
+//zapisak
+word="";
+while(a<wSplit.length){
+	word="" + word + wSplit[a];
+	a++;
+}
+if(!word.contains("-")){
+	System.out.println("Correct! The Word is: " +word);
+	wrd=1;
+	level();
+}
+
+
+
+}
+
+
 }
 public static void custom(){
 	
