@@ -52,6 +52,14 @@ public static void writer(){
 	e.printStackTrace();
 }
 	
+	public double random() {
+        Random rn = new Random();
+        int max = 100;
+        int min = 1;
+        int randomnumber = rn.nextInt((int) (max - min + 1)) + min;
+        return randomnumber;
+
+    }
 	
 
 }
