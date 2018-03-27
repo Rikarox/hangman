@@ -75,7 +75,7 @@ public static void menu(){
         if (x == 1) {
             menu1();
         } else if (x == 2) {
-          //  customWord();
+           custom();
         } else if (x != 1 || x != 2 || x != 3) {
             System.out.println("Please pick an available number:");
             menu();
@@ -87,13 +87,13 @@ public static void menu1(){
         int x = sc.nextInt();
         if (x == 1) {
 	choosenLevel=1;
-	wordSplitter();
+	level();
         } else if (x == 2) {
 	choosenLevel=2;
-	wordSplitter();
+	level();
         } else if (x == 3) {
 	choosenLevel=3;
-	wordSplitter();
+	level();
 
         } else if (x != 1 || x != 2) {
             System.out.println("Please pick an available number:");
@@ -117,6 +117,12 @@ public static void writer(){
 	
 	
 
+}
+public static void level(){
+wordSplitter();	
+}
+public static void custom(){
+	
 }
 public static void main(String[] args) {
 		
