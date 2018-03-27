@@ -30,11 +30,12 @@ public static void reader(){
  		}
 public static void randomNumber(){
 	
-        Random rn = new Random();
+             Random rn = new Random();
         int max = 100;
         int min = 1;
         int randomnumber = rn.nextInt((int) (max - min + 1)) + min;
         return randomnumber;
+
 
 	
 }
